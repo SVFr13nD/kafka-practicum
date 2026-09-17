@@ -1,0 +1,25 @@
+Создание топика  docker exec -it kafka-course-kafka-0-1 kafka-topics.sh --create --topic yandex_practicum_2 --bootstrap-server kafka-0:9092 --partitions 3 --replication-factor 2
+Где
+kafka-course-kafka-0-1 - имя контейнера
+kafka-topics.sh - кафка скрипт по взаимодействию с топиками
+--create - команда создать
+--topic yandex_practicum_2  топик с название yandex_practicum_2
+--bootstrap-server kafka-0:9092 внутренний адрес брокера
+--partitions 3 количество партиций
+--replication-factor 2 количество реплик
+
+
+Подробная информация о созданном топике
+docker exec -it kafka-course-kafka-0-1 kafka-topics.sh --describe --topic yandex_practicum_2 --bootstrap-server kafka-0:9092
+Где
+kafka-course-kafka-0-1 - имя контейнера
+kafka-topics.sh - кафка скрипт по взаимодействию с топиками
+--describe - флаг запроса описания
+--topic yandex_practicum_2  топик с название yandex_practicum_2
+--bootstrap-server kafka-0:9092 внутренний адрес брокера
+
+Что получаем:
+Topic: yandex_practicum_2       TopicId: SkGL-sYZRaKNQUs2hejXGQ PartitionCount: 3       ReplicationFactor: 2    Configs:
+        Topic: yandex_practicum_2       Partition: 0    Leader: 0       Replicas: 0,1   Isr: 1,0
+        Topic: yandex_practicum_2       Partition: 1    Leader: 1       Replicas: 1,2   Isr: 2,1
+        Topic: yandex_practicum_2       Partition: 2    Leader: 2       Replicas: 2,0   Isr: 2,0
