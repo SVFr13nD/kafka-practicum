@@ -1,7 +1,7 @@
 import json
 from confluent_kafka import Consumer
 conf = {
-    "bootstrap.servers": "kps-grf1-lp1:9094",
+     "bootstrap.servers": "[HOST IP\HOST NAME]:9094",
     "group.id": "batch-message-consumer-group",
     "auto.offset.reset": "earliest",
     "enable.auto.commit": False,
