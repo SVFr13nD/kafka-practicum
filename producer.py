@@ -5,7 +5,7 @@ class Message:
         self.id = id
         self.text = text
 conf = {
-    "bootstrap.servers": "kps-grf1-lp1:9094",
+    "bootstrap.servers": "[HOST IP\HOST NAME]:9094",
     "acks": "all",
     "retries": 5
 }
